@@ -24,13 +24,20 @@ class EmojiTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
 
-        cell.textLabel?.text = emojis[indexPath.row]
+        cell.textLabel?.text = "\(emojis[indexPath.row]) \(emojis[indexPath.row].unicodeScalars.first!.properties.name!.capitalized)"
 
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "Definition", sender: nil)
+        let selectedEmoji = emojis[indexPath.row]
+        performSegue(withIdentifier: "Definition", sender: selectedEmoji)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let definitionVC = segue.destination as! DefinitionUIViewController
+        let selectedEmoji = sender as! String
+        definitionVC.emoji = selectedEmoji
     }
     
 
