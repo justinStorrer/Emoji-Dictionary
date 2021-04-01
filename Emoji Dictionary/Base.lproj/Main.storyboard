@@ -62,21 +62,33 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KcK-5s-2Pq">
+                                <rect key="frame" x="20" y="467" width="374" height="61"/>
+                                <string key="text">sdfdsf sdfjksadjf sdlkfsdkl flksdfksldflj sdljfskdflksklf skdjfllskjfskl jfklsjdlkf sdjf;dafjghdjkffgklsdjklf djkfdfkgdfkl fsdf sd</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cXW-Nf-X7P"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="CgI-JP-tiH" secondAttribute="trailing" constant="20" id="4Cf-jL-E3W"/>
                             <constraint firstItem="CgI-JP-tiH" firstAttribute="leading" secondItem="a5m-6f-gt3" secondAttribute="leading" constant="20" id="BDa-vT-uDt"/>
+                            <constraint firstItem="KcK-5s-2Pq" firstAttribute="centerX" secondItem="a5m-6f-gt3" secondAttribute="centerX" id="Hfm-8Q-N4d"/>
                             <constraint firstItem="CgI-JP-tiH" firstAttribute="centerX" secondItem="a5m-6f-gt3" secondAttribute="centerX" id="Q0B-Ft-eaT"/>
+                            <constraint firstItem="KcK-5s-2Pq" firstAttribute="top" secondItem="CgI-JP-tiH" secondAttribute="bottom" constant="42" id="TLy-44-vcb"/>
                             <constraint firstItem="CgI-JP-tiH" firstAttribute="top" secondItem="hrW-t9-l1F" secondAttribute="bottom" constant="27" id="UIU-yC-xPy"/>
                             <constraint firstItem="hrW-t9-l1F" firstAttribute="centerX" secondItem="a5m-6f-gt3" secondAttribute="centerX" id="Z8P-TH-UnP"/>
                             <constraint firstItem="hrW-t9-l1F" firstAttribute="top" secondItem="cXW-Nf-X7P" secondAttribute="top" constant="30" id="b2g-cS-oZc"/>
+                            <constraint firstItem="KcK-5s-2Pq" firstAttribute="leading" secondItem="a5m-6f-gt3" secondAttribute="leading" constant="20" id="h0f-if-FIz"/>
+                            <constraint firstAttribute="trailing" secondItem="KcK-5s-2Pq" secondAttribute="trailing" constant="20" id="h7t-Wq-1Ci"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="D0t-ee-Ugo"/>
                     <connections>
                         <outlet property="emojiDefinitionLabel" destination="CgI-JP-tiH" id="zQp-4h-Hpj"/>
+                        <outlet property="emojiDescriptionLabel" destination="KcK-5s-2Pq" id="guV-VJ-2T1"/>
                         <outlet property="popUpEmojiLabel" destination="hrW-t9-l1F" id="io3-Oo-gEp"/>
                     </connections>
                 </viewController>
